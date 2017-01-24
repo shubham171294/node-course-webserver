@@ -23,10 +23,10 @@ app.use((req, res, next)=>{
   next();
 });
 
-app.use((req,res,next)=>{
-  // middleware to show a page and stop it here as next() is not called. So after this nothing will be executed
-  res.render('maintainance.hbs');
-});
+// app.use((req,res,next)=>{
+//   // middleware to show a page and stop it here as next() is not called. So after this nothing will be executed
+//   res.render('maintainance.hbs');
+// });
 
 app.use(express.static(__dirname + '/public'));
 
