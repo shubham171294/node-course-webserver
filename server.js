@@ -1,6 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
-const fs=require('fs');
+const fs = require('fs');
 
 const port = process.env.PORT || 3000;
 var app = express();
@@ -62,6 +62,15 @@ app.get('/about', (req, res)=>{
     pageTitle: 'About Us',
   });
 });
+
+
+app.get('/projects', (req, res)=>{
+  // res.send(' <h1>HI. I\'m  learning Node.js. This is my first website..Soon more stuff is coming so stay tuned </h1>');
+  res.render('projects.hbs',{
+    pageTitle: 'My Projects'
+  });
+});
+
 
 app.get('/bad', (req, res)=>{
   res.send({
